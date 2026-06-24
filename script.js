@@ -1,6 +1,3 @@
- 
-
-
 const selectcont = document.querySelectorAll(".select-container select")
 const select1 = document.querySelector(".select1-select")
 const select2 = document.querySelector(".select2-select")
@@ -54,7 +51,6 @@ const calculate = async () => {
     let data = await response.json();
 
     let rate = data[fromcurr][tocurr]
-    
     let finalexchangeval = amntval * rate
 
     let msgtext = `${amntval}${fromcurr.toUpperCase()} = ${finalexchangeval}${tocurr.toUpperCase()}`
@@ -64,7 +60,7 @@ const calculate = async () => {
     if (amntval < 1 || amntval === "") {
         amtVal = 1;
         amount.value = "1";
-    } 
+    }
 
 }
 
